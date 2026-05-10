@@ -1,0 +1,56 @@
+[
+  {
+    "id": "models-sculptures",
+    "index": "01",
+    "title": "Models and Sculptures",
+    "blurb": "From a sparrow's wing to a 12-meter dinosaur, our sculpting team works in FRP, fiberglass, metal, clay, and mixed media. Scientific accuracy guides every form."
+  },
+  {
+    "id": "interpretation-centers",
+    "index": "02",
+    "title": "Interpretation Centers",
+    "blurb": "Turnkey design and build of visitor centers for forests, sanctuaries, and ecological sites — narrative, architecture, and exhibit in one continuous story."
+  },
+  {
+    "id": "exhibits-dioramas",
+    "index": "03",
+    "title": "Exhibits and Dioramas",
+    "blurb": "Habitat dioramas, walk-through displays, and life-size scenes that place visitors inside the subject matter."
+  },
+  {
+    "id": "panels-signages",
+    "index": "04",
+    "title": "Informative Panels and Signages",
+    "blurb": "Outdoor and indoor signage systems engineered for legibility, weather, and the cadence of a real site visit."
+  },
+  {
+    "id": "books-publicity",
+    "index": "05",
+    "title": "Books and Publicity Materials",
+    "blurb": "Field guides, catalogues, brochures, and stakeholder publications — designed and produced end to end."
+  },
+  {
+    "id": "film-making",
+    "index": "06",
+    "title": "Film Making",
+    "blurb": "Short films and documentary content for interpretation centers, museums, and institutional use."
+  },
+  {
+    "id": "web-software",
+    "index": "07",
+    "title": "Web Applications & Interactive Software",
+    "blurb": "Companion web tools, digital archives, and visitor engagement platforms tied to physical exhibits."
+  },
+  {
+    "id": "kiosks",
+    "index": "08",
+    "title": "Kiosks",
+    "blurb": "Touch-driven interpretation kiosks: hardware specification through software interface, deployed and serviced on site."
+  },
+  {
+    "id": "ar-vr",
+    "index": "09",
+    "title": "AR & VR Applications",
+    "blurb": "Augmented and virtual reality experiences for spaces where the subject matter cannot physically be shown — desert ecosystems, extinct fauna, geological time."
+  }
+]

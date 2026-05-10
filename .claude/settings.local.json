@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npx next *)",
+      "Bash(node scripts/seed-projects.mjs)",
+      "Bash(node scripts/seed-projects.mjs --force)",
+      "Bash(npm uninstall *)"
+    ]
+  }
+}
