@@ -244,11 +244,41 @@ a determined attacker hitting many instances at once. For production-grade
 limits across instances, swap `lib/rate-limit.ts`'s storage layer to
 Upstash Redis or Vercel KV — the `rateLimit()` signature stays the same.
 
-## Deploying to Vercel
+## Deploying to AWS
 
-1. Push to GitHub, import the repo in Vercel.
-2. Set the environment variables listed above.
-3. Deploy. The default `next build` is enough; no `vercel.json` required.
+The site deploys as a **static export to S3 + CloudFront** with a separate
+**AWS Lambda Function URL** for the contact-form handler. CloudFront
+fronts both so visitors see a single origin.
+
+Full walkthrough — including SES verification, IAM roles, CloudFront
+configuration, and Route 53 — is in [`DEPLOY.md`](./DEPLOY.md).
+
+Day-to-day after the one-time setup:
+
+```bash
+npm run deploy           # both static + Lambda
+npm run deploy:static    # just the website
+npm run deploy:lambda    # just the contact handler
+```
+
+Estimated monthly cost at studio traffic: **~$1–2/month**.
+
+### Local Lambda dev
+
+The contact handler lives at [`lambda/contact/`](./lambda/contact/) as a
+standalone deployable. To exercise it locally:
+
+```bash
+cd lambda/contact
+npm install              # one-time
+npm run dev              # http://localhost:8787
+```
+
+Then in the web app's `.env.local`:
+
+```
+NEXT_PUBLIC_CONTACT_API_URL=http://localhost:8787
+```
 
 ## Future enhancements (not built in v1)
 

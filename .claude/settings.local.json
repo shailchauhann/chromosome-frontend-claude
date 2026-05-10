@@ -5,7 +5,8 @@
       "Bash(npx next *)",
       "Bash(node scripts/seed-projects.mjs)",
       "Bash(node scripts/seed-projects.mjs --force)",
-      "Bash(npm uninstall *)"
+      "Bash(npm uninstall *)",
+      "Bash(npm run *)"
     ]
   }
 }

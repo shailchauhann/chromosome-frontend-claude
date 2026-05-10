@@ -12,6 +12,12 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mjs,mdx,json,css,md}\"",
     "typecheck": "tsc --noEmit",
     "new-project": "node scripts/new-project.mjs",
+    "build:s3": "node scripts/build-s3.mjs",
+    "lambda:dev": "node lambda/contact/dev-server.mjs",
+    "lambda:package": "node lambda/contact/package.mjs",
+    "deploy:static": "node scripts/deploy-static.mjs",
+    "deploy:lambda": "node scripts/deploy-lambda.mjs",
+    "deploy": "npm run deploy:lambda && npm run deploy:static",
     "prepare": "husky || true"
   },
   "dependencies": {

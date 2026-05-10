@@ -30,9 +30,15 @@ yarn-error.log*
 # env
 .env
 .env*.local
+.env.deploy
 
 # vercel
 .vercel
+
+# AWS deploy artefacts
+lambda/contact/dist/
+lambda/contact/node_modules/
+lambda/contact/package-lock.json
 
 # typescript
 *.tsbuildinfo

@@ -79,7 +79,13 @@ export function ContactForm() {
     }
 
     try {
-      const res = await fetch('/api/contact', {
+      // The submit endpoint is configurable so dev can point at a local
+      // Lambda dev-server while production routes through CloudFront to the
+      // deployed Lambda Function URL. Default keeps things working on
+      // hybrid deployments where /api/contact is proxied.
+      const endpoint =
+        process.env.NEXT_PUBLIC_CONTACT_API_URL?.trim() || '/api/contact';
+      const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ ...parsed.data, turnstileToken }),
